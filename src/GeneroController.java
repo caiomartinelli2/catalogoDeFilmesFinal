@@ -20,6 +20,18 @@ public class GeneroController {
         System.out.println("Genero criado!");
     }
 
+    public void deleteGenero(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_genero: ");
+        int cod_genero = input.nextInt();
+
+        GeneroBean gb = new GeneroBean(cod_genero);
+        
+        GeneroModel.delete(gb, con);
+        System.out.println("Genero deletado!");
+    }
+
     void listarGenero(Connection con) throws SQLException {
         HashSet all = GeneroModel.listAll(con);
         Iterator<GeneroBean> it = all.iterator();

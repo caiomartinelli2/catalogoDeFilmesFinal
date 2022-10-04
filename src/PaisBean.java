@@ -14,6 +14,11 @@ public class PaisBean{
     }
 
 
+    public PaisBean(int cod_pais) {
+        this.cod_pais=cod_pais;
+    }
+
+
     public int getCod_pais() {
         return cod_pais;
     }
@@ -35,6 +40,11 @@ public class PaisBean{
 
     public String toString(){
         return "cod_pais: "+cod_pais+" nome_pais: "+nome_pais;
+    }
+
+
+    public int getCod_retorno() {
+        return 0;
     }
 
 }

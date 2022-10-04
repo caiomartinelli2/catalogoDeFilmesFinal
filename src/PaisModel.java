@@ -17,6 +17,17 @@ public class PaisModel {
         
     }
     
+    static void delete(PaisBean p, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM pais WHERE cod_pais = ? ");
+
+        st.setInt(1, p.getCod_pais());
+
+        st.execute();
+        st.close();
+        
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

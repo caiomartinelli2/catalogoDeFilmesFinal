@@ -17,6 +17,17 @@ public class AtorModel {
         st.close();
         
     }
+    
+    static void delete(AtorBean a, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM ator WHERE cod_ator = ? " + "VALUES (?)");
+
+        st.setInt(1, a.getCod_ator());
+        
+        st.execute();
+        st.close();
+        
+    }
 
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
@@ -46,7 +57,6 @@ public class AtorModel {
             
             ab.setNome_ator((result.getString(1) ));
             fb.setNome_filme((result.getString(2) ));
-            
             
             
             ab.setFilme(fb);    

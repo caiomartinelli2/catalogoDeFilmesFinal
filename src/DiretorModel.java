@@ -18,6 +18,17 @@ public class DiretorModel {
         
     }
 
+    static void delete(DiretorBean db, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM diretor WHERE cod_diretor = ? ");
+
+        st.setInt(1, db.getCod_diretor());
+        
+        st.execute();
+        st.close();
+        
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

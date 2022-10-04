@@ -17,6 +17,11 @@ public class AtorBean {
     }
 
 
+    public AtorBean(int cod_ator) {
+        this.cod_ator = cod_ator;
+    }
+
+
     public int getCod_ator() {
         return cod_ator;
     }

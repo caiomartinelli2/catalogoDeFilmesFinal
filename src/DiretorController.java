@@ -21,6 +21,18 @@ public class DiretorController {
         System.out.println("Diretor criado!");
     }
 
+    public void deleteDiretor(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_diretor: ");
+        int cod_diretor = input.nextInt();
+    
+        DiretorBean db = new DiretorBean(cod_diretor);
+        
+        DiretorModel.delete(db, con);
+        System.out.println("Diretor deletado se existir!");
+    }
+
     void listarDiretor(Connection con) throws SQLException {
         HashSet all = DiretorModel.listAll(con);
         Iterator<DiretorBean> it = all.iterator();

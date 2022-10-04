@@ -18,6 +18,17 @@ public class RoteiristaModel {
         
     }
 
+    static void delete(RoteiristaBean r, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM roteirista WHERE cod_roteirista = ? ");
+
+        st.setInt(1, r.getCod_roteirista());
+        
+        st.execute();
+        st.close();
+        
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

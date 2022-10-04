@@ -19,6 +19,11 @@ public DiretorBean(String sql) {
 }
 
 
+public DiretorBean(int cod_diretor) {
+    this.cod_diretor=cod_diretor;
+}
+
+
 public int getCod_diretor() {
     return cod_diretor;
 }

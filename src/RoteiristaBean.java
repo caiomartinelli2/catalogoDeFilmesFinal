@@ -13,6 +13,11 @@ public class RoteiristaBean {
     }
 
 
+    public RoteiristaBean(int cod_roteirista) {
+        this.cod_roteirista=cod_roteirista;
+    }
+
+
     public int getCod_roteirista() {
         return cod_roteirista;
     }

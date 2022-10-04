@@ -51,6 +51,18 @@ public class FilmeController {
         System.out.println("Filme criado!");
     }
 
+    public void deleteFilme(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_filme: ");
+        int cod_filme = input.nextInt();
+    
+        FilmeBean fb = new FilmeBean(cod_filme);
+        
+        FilmeModel.delete(fb, con);
+        System.out.println("Filme deletado!");
+    }
+
     void listarFilme(Connection con) throws SQLException {
         HashSet all = FilmeModel.listAll(con);
         Iterator<FilmeBean> it = all.iterator();

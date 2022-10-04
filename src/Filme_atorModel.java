@@ -14,4 +14,17 @@ public class Filme_atorModel {
         st.close();
         
     }
+
+    static void delete(Filme_atorBean fab, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM filme_ator WHERE cod_filme = ? and cod_ator = ? ");
+
+        st.setInt(1, fab.getCod_filme());
+        st.setInt(2, fab.getCod_ator());
+        
+        st.execute();
+        st.close();
+        
+    }
+
 }

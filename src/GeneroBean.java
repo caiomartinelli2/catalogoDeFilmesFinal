@@ -13,12 +13,17 @@ public class GeneroBean {
     }
 
 
+    public GeneroBean(int cod_genero) {
+        this.cod_genero = cod_genero;
+    }
+
+
     public int getCod_genero() {
         return cod_genero;
     }
 
 
-    public void setCod_genero(int cod_genero) {
+    public void setCod_genero() {
         this.cod_genero = cod_genero;
     }
 
@@ -33,6 +38,6 @@ public class GeneroBean {
     }
 
     public String toString(){
-        return " cod_ator: "+cod_genero+" nome_ator: "+nome_genero;
+        return " cod_genero: "+cod_genero+" nome_genero: "+nome_genero;
     }
 }

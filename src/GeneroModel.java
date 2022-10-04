@@ -17,6 +17,17 @@ public class GeneroModel {
         
     }
 
+    static void delete(GeneroBean g, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM genero WHERE cod_genero = ? ");
+
+        st.setInt(1, g.getCod_genero());
+        
+        st.execute();
+        st.close();
+        
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

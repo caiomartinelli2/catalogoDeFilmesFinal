@@ -12,37 +12,24 @@ public class App {
             op = menu();
             try {
                 switch (op) {
-                    case 1: new PaisController().createPais(con);;
+                    case 1: new Ator().atorMenu(op, con);
+                    System.in.read();
                     break;
-                    case 2: new DiretorController().createDiretor(con);
+                    case 2: new Diretor().diretorMenu(op, con);
+                    System.in.read();
                     break;
-                    case 3: new RoteiristaController().createRoteirista(con);
+                    case 3: new Filme_ator().filme_atorMenu(op, con);
+                    System.in.read();
                     break;
-                    case 4: new AtorController().createAtor(con);
+                    case 4: new Filme().filmeMenu(op, con);;
                     break;
-                    case 5: new GeneroController().createGenero(con);
+                    case 5: new Genero().generoMenu(op, con);;
                     break;
-                    case 6: new FilmeController().createFilme(con);
+                    case 6: new Pais().paisMenu(op, con);
                     break;
-                    case 7: new Filme_atorController().createFilme_ator(con);
+                    case 7: new Roteirista().roteiristaMenu(op, con);;
                     break;
-                    case 8: new PaisController().listarPais(con);
-                    break;
-                    case 9: new DiretorController().listarDiretor(con);
-                    break;
-                    case 10: new RoteiristaController().listarRoteirista(con);
-                    break;
-                    case 11: new AtorController().listarAtor(con);
-                    break;
-                    case 12: new GeneroController().listarGenero(con);
-                    break;
-                    case 13: new FilmeController().listarFilme(con);
-                    break;
-                    case 14: new FilmeController().listarFilmeGenero(con);
-                    break;
-                    case 15: new AtorController().listarAtorFilme(con);
-                    break;
-                    case 16: new DiretorController().listarDiretorPais(con);
+                    case 8: new ConsultarEspeciais().consultarEspeciaisMenu(op, con);;
                     break;
                 }
             }catch(SQLException ex) {
@@ -57,14 +44,14 @@ public class App {
     private static int menu() {
         System.out.println("");
         System.out.println("Informe o número da opção que desejas executar: ");
-        System.out.println("1 - Inserir um novo país");
-        System.out.println("2 - Inserir um novo diretor");
-        System.out.println("3 - Inserir um novo roteirista");
-        System.out.println("4 - Inserir um novo ator");
-        System.out.println("5 - Inserir um novo genero de filme");
-        System.out.println("6 - Inserir um novo filme");
-        System.out.println("7 - Inserir uma nova Relação Filme_ator");
-        System.out.println("8 - Listar os Países");
+        System.out.println("1 - Ator");
+        System.out.println("2 - Diretor");
+        System.out.println("3 - Filme_ator");
+        System.out.println("4 - Filme");
+        System.out.println("5 - Genero");
+        System.out.println("6 - Pais");
+        System.out.println("7 - Roteirista");
+        System.out.println("8 - Consultas Especiais");
         System.out.print("Sua opção: ");
         Scanner input = new Scanner(System.in);
         

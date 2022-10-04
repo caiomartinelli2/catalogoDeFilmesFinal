@@ -17,4 +17,20 @@ public class Filme_atorController {
         Filme_atorModel.create(fab, con);
         System.out.println("Relação Filme e ator criado!");
     }
+    
+    public void deleteFilme_ator(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_filme: ");
+        int cod_filme = input.nextInt();
+        
+        System.out.println("cod_ator: ");
+        int cod_ator = input.nextInt();
+        
+        
+        Filme_atorBean fb = new Filme_atorBean(cod_ator, cod_filme);
+        
+        Filme_atorModel.delete(fb, con);
+        System.out.println("Relação filme_ator deletado!");
+    }
 }

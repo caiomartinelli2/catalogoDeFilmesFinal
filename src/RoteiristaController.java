@@ -21,6 +21,18 @@ public class RoteiristaController {
         System.out.println("Roteirista criado!");
     }
 
+    public void deleteRoteirista(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_roteirista: ");
+        int cod_roteirista = input.nextInt();
+    
+        RoteiristaBean rb = new RoteiristaBean(cod_roteirista);
+        
+        RoteiristaModel.delete(rb, con);
+        System.out.println("Roteirista deletado!");
+    }
+
     void listarRoteirista(Connection con) throws SQLException {
         HashSet all = RoteiristaModel.listAll(con);
         Iterator<RoteiristaBean> it = all.iterator();

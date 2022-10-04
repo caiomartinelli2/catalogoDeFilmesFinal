@@ -28,6 +28,10 @@ public class FilmeBean {
     public FilmeBean(String string) {
     }
 
+    public FilmeBean(int cod_filme) {
+        this.cod_filme=cod_filme;
+    }
+
     public String toString(){
         return ("cod_filme: "+cod_filme+" nome: "+nome_filme+" duracao: "+duracao+
                 " sinopse: "+sinopse+" cod_pais: "+cod_pais+" cod_genero: "+cod_genero+" cod_diretor: "+cod_diretor+"cod_roteirista"+cod_roteirista);

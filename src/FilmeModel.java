@@ -25,6 +25,17 @@ public class FilmeModel {
         
     }
 
+    static void delete(FilmeBean f, Connection con) throws SQLException{
+        PreparedStatement st;
+        st = con.prepareStatement("DELETE FROM filme WHERE cod_filme = ?");
+
+        st.setInt(1, f.getCod_filme());
+        
+        st.execute();
+        st.close();
+        
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();
