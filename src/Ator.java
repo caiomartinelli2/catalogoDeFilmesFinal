@@ -19,6 +19,9 @@ public class Ator {
                     case 3: new AtorController().listarAtor(con);
                     System.in.read();
                     break;
+                    case 4: new AtorController();
+                    System.in.read();
+                    break;
                 }
             
             

@@ -20,10 +20,16 @@ public class Filme {
                         case 3: new FilmeController().listarFilme(con);
                         System.in.read();
                         break;
+                        case 4: new FilmeController().updateFilme(con);
+                        System.in.read();
+                        break;
+                        case 5: new FilmeController().FilmePeloCod(con);
+                        System.in.read();
+                        break;
                     }
                 
                 
-            } while(op>0 && op<3);  
+            } while(op>0 && op<5);  
         
     }
         private static int menu() { 
