@@ -35,6 +35,21 @@ public class AtorController {
         System.out.println("Ator deletado se ele existir!");
     }
 
+    public void atorPeloCod(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+            
+        System.out.println("cod_ator: ");
+        int cod_ator = input.nextInt();
+        input.nextLine();
+        
+        
+        HashSet all = AtorModel.atorByCod(cod_ator, con);
+        Iterator<AtorBean> it = all.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next().toString());
+        }
+    }
+
     void listarAtor(Connection con) throws SQLException {
         HashSet all = AtorModel.listAll(con);
         Iterator<AtorBean> it = all.iterator();

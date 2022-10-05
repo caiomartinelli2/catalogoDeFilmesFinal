@@ -18,6 +18,8 @@ public class Diretor {
                         case 3: new DiretorController().listarDiretor(con);
                         System.in.read();
                         break;
+                        case 4: new DiretorController().diretorPeloCod(con);
+                        System.in.read();
                     }
                 
                 
@@ -30,8 +32,9 @@ public class Diretor {
             System.out.println("1 - Inserir um novo diretor: ");
             System.out.println("2 - Deletar um diretor: ");
             System.out.println("3 - Listar todos os diretores: ");
+            System.out.println("4 - Listar o diretor pelo seu código: ");
             System.out.println("**Informe o número diferente para voltar**");
-            System.out.print("\nSua opção: \n");
+            System.out.print("\nSua opção: ");
             Scanner input = new Scanner(System.in);
         
             return input.nextInt();

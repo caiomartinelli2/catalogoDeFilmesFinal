@@ -23,7 +23,7 @@ public class Filme {
                         case 4: new FilmeController().updateFilme(con);
                         System.in.read();
                         break;
-                        case 5: new FilmeController().FilmePeloCod(con);
+                        case 5: new FilmeController().filmePeloCod(con);
                         System.in.read();
                         break;
                     }
@@ -39,7 +39,7 @@ public class Filme {
             System.out.println("2 - Deletar um filme: ");
             System.out.println("3 - Listar todos os filmes: ");
             System.out.println("**Informe o número diferente para voltar**");
-            System.out.print("\nSua opção: \n");
+            System.out.print("\nSua opção: ");
             
             Scanner input = new Scanner(System.in);
         

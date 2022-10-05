@@ -29,19 +29,23 @@ public class AtorModel {
         
     }
 
-    static void PesquisaID(AtorBean a, Connection con) throws SQLException{
-        PreparedStatement st;
+    static HashSet atorByCod(int cod_ator, Connection con) throws SQLException {
+        Statement st;
+        HashSet list = new HashSet();
+            st = con.createStatement();
+            
+            String sql = ("SELECT cod_ator,nome_ator,cod_pais FROM ator "+
+            "WHERE cod_ator = " + cod_ator);
+            ResultSet result = st.executeQuery(sql);
+            
+            if(result.next()) {
+                list.add(new AtorBean(result.getInt(1), result.getString(2), result.getInt(3)));
+            }
         
-        String sql = ("SELECT cod_ator, nome_ator, cod_pais FROM ator where cod_ator = ?");
-        st = con.prepareStatement(sql);
-        
-        st.setInt(1, a.getCod_ator());
-
-        st.execute();
-        System.out.println(st);
-        st.close();
-        
+        return list;
     }
+
+
 
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;

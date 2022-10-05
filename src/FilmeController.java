@@ -104,7 +104,7 @@ public class FilmeController {
         System.out.println("Filme atualizado!");
     }
 
-    public void FilmePeloCod(Connection con) throws SQLException{
+    public void filmePeloCod(Connection con) throws SQLException{
         Scanner input = new Scanner(System.in);
         
         System.out.println("cod_filme: ");
@@ -112,7 +112,7 @@ public class FilmeController {
         input.nextLine();
         
         
-        HashSet all = FilmeModel.FilmebyCod(cod_filme, con);
+        HashSet all = FilmeModel.filmeByCod(cod_filme, con);
         Iterator<FilmeBean> it = all.iterator();
         while(it.hasNext()) {
             System.out.println(it.next().toString());

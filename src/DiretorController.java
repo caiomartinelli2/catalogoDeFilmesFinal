@@ -33,6 +33,21 @@ public class DiretorController {
         System.out.println("Diretor deletado se existir!");
     }
 
+    public void diretorPeloCod(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+            
+        System.out.println("cod_diretor: ");
+        int cod_diretor = input.nextInt();
+        input.nextLine();
+        
+        
+        HashSet all = DiretorModel.diretorByCod(cod_diretor, con);
+        Iterator<DiretorBean> it = all.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next().toString());
+        }
+    }
+
     void listarDiretor(Connection con) throws SQLException {
         HashSet all = DiretorModel.listAll(con);
         Iterator<DiretorBean> it = all.iterator();

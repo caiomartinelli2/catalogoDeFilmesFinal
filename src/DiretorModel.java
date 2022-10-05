@@ -29,6 +29,22 @@ public class DiretorModel {
         
     }
 
+    static HashSet diretorByCod(int cod_diretor, Connection con) throws SQLException {
+        Statement st;
+        HashSet list = new HashSet();
+            st = con.createStatement();
+            
+            String sql = ("SELECT cod_diretor, nome_diretor, cod_pais FROM diretor "+
+            "WHERE cod_diretor = " + cod_diretor);
+            ResultSet result = st.executeQuery(sql);
+            
+            if(result.next()) {
+                list.add(new DiretorBean(result.getInt(1), result.getString(2), result.getInt(3)));
+            }
+        
+        return list;
+    }
+
     static HashSet listAll(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

@@ -50,7 +50,7 @@ public class FilmeModel {
         return list;
     }
 
-    static HashSet FilmebyCod(int cod_filme, Connection con) throws SQLException {
+    static HashSet filmeByCod(int cod_filme, Connection con) throws SQLException {
         Statement st;
         HashSet filmeCod = new HashSet();
             st = con.createStatement();

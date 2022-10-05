@@ -19,13 +19,14 @@ public class Ator {
                     case 3: new AtorController().listarAtor(con);
                     System.in.read();
                     break;
-                    case 4: new AtorController();
+                    case 4: new AtorController().atorPeloCod(con);
                     System.in.read();
                     break;
+                    
                 }
             
             
-        } while(op>0 && op<3);  
+        } while(op>0 && op<10);  
     
 }
     private static int menu() { 
@@ -35,7 +36,7 @@ public class Ator {
         System.out.println("2 - Deletar um ator: ");
         System.out.println("3 - Listar todos os atores: ");
         System.out.println("**Informe o número diferente para voltar**");
-        System.out.print("\nSua opção: \n");
+        System.out.print("\nSua opção: ");
         Scanner input = new Scanner(System.in);
     
         return input.nextInt();
