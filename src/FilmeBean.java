@@ -36,13 +36,13 @@ public class FilmeBean {
     }
 
     public String toString(){
-        return ("cod_filme: "+cod_filme+" nome: "+nome_filme+" duracao: "+duracao+
-                " sinopse: "+sinopse+" cod_pais: "+cod_pais+" cod_genero: "+cod_genero+" cod_diretor: "+cod_diretor+" cod_roteirista "+cod_roteirista);
+        return ("|cod_filme: "+cod_filme+" | nome: "+nome_filme+"| duracao: "+duracao+
+                "| sinopse: "+sinopse+"| cod_pais: "+cod_pais+"| cod_genero: "+cod_genero+"| cod_diretor: "+cod_diretor+"| cod_roteirista "+cod_roteirista + "|\n");
             }
     
     public String toString2(){
         
-        return ("nome_filme: "+nome_filme+" nome_genero: "+genero.getNome_genero());
+        return ("| nome_filme: "+nome_filme+"| nome_genero: "+genero.getNome_genero()+"|");
          
     }
     

@@ -64,12 +64,12 @@ public class AtorBean {
     
     
     public String toString(){
-        return " cod_ator: "+cod_ator+" nome_ator: "+nome_ator+" cod_pais: "+cod_pais;
+        return "| cod_ator: "+cod_ator+"| nome_ator: "+nome_ator+"| cod_pais: "+cod_pais+"|";
     }
 
     public String toString2(){
         
-        return ("nome_ator: "+nome_ator+" nome_filme: "+filme.getNome_filme());
+        return ("|nome_ator: "+nome_ator+"| nome_filme: "+filme.getNome_filme()+"|");
          
     }
 

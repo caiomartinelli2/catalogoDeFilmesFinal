@@ -64,12 +64,12 @@ public void setPais(PaisBean pais) {
 }
 
 public String toString(){
-    return " cod_diretor: "+cod_diretor+" nome_diretor: "+nome_diretor+" cod_pais: "+cod_pais;
+    return "| cod_diretor: "+cod_diretor+"| nome_diretor: "+nome_diretor+"| cod_pais: "+cod_pais+"|";
 }
 
 public String toString2(){
         
-    return ("nome_diretor: "+nome_diretor+" nome_pais: "+pais.getNome_pais());
+    return ("|nome_diretor: "+nome_diretor+"| nome_pais: "+pais.getNome_pais()+"|");
      
 }
 

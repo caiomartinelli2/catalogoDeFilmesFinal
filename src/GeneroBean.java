@@ -38,6 +38,6 @@ public class GeneroBean {
     }
 
     public String toString(){
-        return " cod_genero: "+cod_genero+" nome_genero: "+nome_genero;
+        return "|cod_genero: "+cod_genero+"| nome_genero: "+nome_genero+"|";
     }
 }

@@ -8,7 +8,7 @@ public class App {
         Connection con = c.getConnection();
         
         int op = 0;
-        do{
+        do{ 
             op = menu();
             try {
                 switch (op) {
@@ -36,7 +36,9 @@ public class App {
                 //ex.printStackTrace();
                 System.out.println(ex.getMessage());
                 continue;
+            
             }
+            
         } while(op>0 && op<23);  
         con.close();
     }

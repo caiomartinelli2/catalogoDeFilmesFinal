@@ -39,7 +39,7 @@ public class PaisBean{
     }
 
     public String toString(){
-        return "cod_pais: "+cod_pais+" nome_pais: "+nome_pais;
+        return "| cod_pais: "+cod_pais+"| nome_pais: "+nome_pais+"|";
     }
 
 

@@ -58,7 +58,7 @@ public class RoteiristaBean {
     }
 
     public String toString(){
-        return " cod_roteirista: "+cod_roteirista+" nome_roteirista: "+nome_roteirista+" cod_pais: "+cod_pais;
+        return "| cod_roteirista: "+cod_roteirista+"| nome_roteirista: "+nome_roteirista+"| cod_pais: "+cod_pais+"|";
     }
     
 

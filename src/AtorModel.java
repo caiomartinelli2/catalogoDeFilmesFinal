@@ -95,7 +95,7 @@ public class AtorModel {
         HashSet list = new HashSet();
         st = con.createStatement();
             
-        String sql = "select a1.nome_ator, f1.nome_filme from ator a1 join filme_ator fa1 on a1.cod_ator = fa1.cod_ator join filme f1 on f1.cod_filme = fa1.cod_filme;";
+        String sql = "select a1.nome_ator, f1.nome_filme from ator a1 join filme_ator fa1 on a1.cod_ator = fa1.cod_ator join filme f1 on f1.cod_filme = fa1.cod_filme ORDER BY a1.cod_ator;";
         ResultSet result = st.executeQuery(sql);
         
         while(result.next()) {
