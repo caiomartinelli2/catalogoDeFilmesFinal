@@ -15,9 +15,12 @@ git clone https://github.com/caiomartinelli2/catalogoDeFilmesFinal.git
 
 **4. Faça a configuração da conexão na classe "Conexao.java"**
 
-**2. Execute o método main na classe "App"**
+**5.Confira a instalação da bíblioteca no arquivo "postgresql-42.2.19"**
+
+**6. Execute o método main na classe "App"**
 
 🛠️ Construído com
+
 Ferramentas utilizadas para criar o projeto
 
 VsCode - IDE utilizada
