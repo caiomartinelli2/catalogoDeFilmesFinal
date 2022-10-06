@@ -5,7 +5,7 @@
 -- Dumped from database version 14.5
 -- Dumped by pg_dump version 14.5
 
--- Started on 2022-10-06 14:59:05
+-- Started on 2022-10-06 15:16:14
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -128,19 +128,17 @@ ALTER TABLE public.roteirista OWNER TO postgres;
 -- Data for Name: ator; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.ator (cod_ator, nome_ator, cod_pais) FROM stdin;
-1	Robert Downey Jr.	3
-2	Brie Larson	3
-3	Benedict Cumberbath	2
-4	Tom Holland	3
-5	Samuel Jackson 	3
-7	Edward Norton 	3
-8	Brad Pitt	3
-9	Will Smith 	3
-10	Jaden Smith	3
-11	Morgan Freeman	3
-12	Tim Robbins 	2
-\.
+INSERT INTO public.ator VALUES (1, 'Robert Downey Jr.', 3);
+INSERT INTO public.ator VALUES (2, 'Brie Larson', 3);
+INSERT INTO public.ator VALUES (3, 'Benedict Cumberbath', 2);
+INSERT INTO public.ator VALUES (4, 'Tom Holland', 3);
+INSERT INTO public.ator VALUES (5, 'Samuel Jackson ', 3);
+INSERT INTO public.ator VALUES (7, 'Edward Norton ', 3);
+INSERT INTO public.ator VALUES (8, 'Brad Pitt', 3);
+INSERT INTO public.ator VALUES (9, 'Will Smith ', 3);
+INSERT INTO public.ator VALUES (10, 'Jaden Smith', 3);
+INSERT INTO public.ator VALUES (11, 'Morgan Freeman', 3);
+INSERT INTO public.ator VALUES (12, 'Tim Robbins ', 2);
 
 
 --
@@ -149,18 +147,16 @@ COPY public.ator (cod_ator, nome_ator, cod_pais) FROM stdin;
 -- Data for Name: diretor; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.diretor (cod_diretor, nome_diretor, cod_pais) FROM stdin;
-1	Russos Brothers	3
-2	David Fincher	3
-3	Gabriele Muccino 	6
-4	Jon Watts	3
-5	Scott Derrickson 	3
-6	Frank Darabont	4
-7	Guy Ritchie	2
-8	Jon Favreau 3	3
-9	Chris Sanders	3
-10	Anna Boden	3
-\.
+INSERT INTO public.diretor VALUES (1, 'Russos Brothers', 3);
+INSERT INTO public.diretor VALUES (2, 'David Fincher', 3);
+INSERT INTO public.diretor VALUES (3, 'Gabriele Muccino ', 6);
+INSERT INTO public.diretor VALUES (4, 'Jon Watts', 3);
+INSERT INTO public.diretor VALUES (5, 'Scott Derrickson ', 3);
+INSERT INTO public.diretor VALUES (6, 'Frank Darabont', 4);
+INSERT INTO public.diretor VALUES (7, 'Guy Ritchie', 2);
+INSERT INTO public.diretor VALUES (8, 'Jon Favreau 3', 3);
+INSERT INTO public.diretor VALUES (9, 'Chris Sanders', 3);
+INSERT INTO public.diretor VALUES (10, 'Anna Boden', 3);
 
 
 --
@@ -169,18 +165,16 @@ COPY public.diretor (cod_diretor, nome_diretor, cod_pais) FROM stdin;
 -- Data for Name: filme; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.filme (cod_filme, nome_filme, duracao, sinopse, cod_pais, cod_genero, cod_diretor, cod_roteirista) FROM stdin;
-1	Vingadores Ultimato	181	Filme da marvel	3	5	1	1
-2	Clube da luta	139	Um homem que sofre de ins“nia conhece um estranho	3	2	2	2
-3	A Procura da felicidade	117	Chris enfrenta s‚rios problemas financeiros 	3	4	3	3
-4	Homem-Aranha 3	148	Homem aranha lida com as consequecias da sua identidade ser descoberta	3	5	4	4
-5	Doutor Estranho	115	Apos sua carreira ser destruida, Stephen tem uma nova chance 	3	5	5	5
-6	Um sonho de liberdade	142	Andy e condenado injustamente a prisao perpetua	3	4	6	6
-7	Sherlock Holmes	128	O detetive Sherlock precisa devendar o responsavel por diversos crimes	2	2	7	7
-8	Homem de Ferro 1	126	Tony Stark e sequestrado e precisa construir uma armadura para escapar	3	5	8	8
-9	Como treinar o seu dragao	98	Solu‡o um jovem viking encontra um dragao perdido	3	3	8	8
-10	Capita Marvel	124	Capita Marvel impede a invasao Kree na terra	3	5	10	10
-\.
+INSERT INTO public.filme VALUES (1, 'Vingadores Ultimato', 181, 'Filme da marvel', 3, 5, 1, 1);
+INSERT INTO public.filme VALUES (2, 'Clube da luta', 139, 'Um homem que sofre de ins“nia conhece um estranho', 3, 2, 2, 2);
+INSERT INTO public.filme VALUES (3, 'A Procura da felicidade', 117, 'Chris enfrenta s‚rios problemas financeiros ', 3, 4, 3, 3);
+INSERT INTO public.filme VALUES (4, 'Homem-Aranha 3', 148, 'Homem aranha lida com as consequecias da sua identidade ser descoberta', 3, 5, 4, 4);
+INSERT INTO public.filme VALUES (5, 'Doutor Estranho', 115, 'Apos sua carreira ser destruida, Stephen tem uma nova chance ', 3, 5, 5, 5);
+INSERT INTO public.filme VALUES (6, 'Um sonho de liberdade', 142, 'Andy e condenado injustamente a prisao perpetua', 3, 4, 6, 6);
+INSERT INTO public.filme VALUES (7, 'Sherlock Holmes', 128, 'O detetive Sherlock precisa devendar o responsavel por diversos crimes', 2, 2, 7, 7);
+INSERT INTO public.filme VALUES (8, 'Homem de Ferro 1', 126, 'Tony Stark e sequestrado e precisa construir uma armadura para escapar', 3, 5, 8, 8);
+INSERT INTO public.filme VALUES (9, 'Como treinar o seu dragao', 98, 'Solu‡o um jovem viking encontra um dragao perdido', 3, 3, 8, 8);
+INSERT INTO public.filme VALUES (10, 'Capita Marvel', 124, 'Capita Marvel impede a invasao Kree na terra', 3, 5, 10, 10);
 
 
 --
@@ -189,25 +183,23 @@ COPY public.filme (cod_filme, nome_filme, duracao, sinopse, cod_pais, cod_genero
 -- Data for Name: filme_ator; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.filme_ator (cod_filme, cod_ator) FROM stdin;
-1	1
-7	1
-8	1
-1	2
-10	2
-1	3
-4	3
-5	3
-1	4
-4	4
-10	5
-2	7
-2	8
-3	9
-3	10
-6	11
-6	12
-\.
+INSERT INTO public.filme_ator VALUES (1, 1);
+INSERT INTO public.filme_ator VALUES (7, 1);
+INSERT INTO public.filme_ator VALUES (8, 1);
+INSERT INTO public.filme_ator VALUES (1, 2);
+INSERT INTO public.filme_ator VALUES (10, 2);
+INSERT INTO public.filme_ator VALUES (1, 3);
+INSERT INTO public.filme_ator VALUES (4, 3);
+INSERT INTO public.filme_ator VALUES (5, 3);
+INSERT INTO public.filme_ator VALUES (1, 4);
+INSERT INTO public.filme_ator VALUES (4, 4);
+INSERT INTO public.filme_ator VALUES (10, 5);
+INSERT INTO public.filme_ator VALUES (2, 7);
+INSERT INTO public.filme_ator VALUES (2, 8);
+INSERT INTO public.filme_ator VALUES (3, 9);
+INSERT INTO public.filme_ator VALUES (3, 10);
+INSERT INTO public.filme_ator VALUES (6, 11);
+INSERT INTO public.filme_ator VALUES (6, 12);
 
 
 --
@@ -216,13 +208,11 @@ COPY public.filme_ator (cod_filme, cod_ator) FROM stdin;
 -- Data for Name: genero; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.genero (cod_genero, nome_genero) FROM stdin;
-1	Acao
-2	Suspense
-3	Aventura
-4	Drama
-5	Super-Heroi
-\.
+INSERT INTO public.genero VALUES (1, 'Acao');
+INSERT INTO public.genero VALUES (2, 'Suspense');
+INSERT INTO public.genero VALUES (3, 'Aventura');
+INSERT INTO public.genero VALUES (4, 'Drama');
+INSERT INTO public.genero VALUES (5, 'Super-Heroi');
 
 
 --
@@ -231,14 +221,12 @@ COPY public.genero (cod_genero, nome_genero) FROM stdin;
 -- Data for Name: pais; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.pais (cod_pais, nome_pais) FROM stdin;
-1	Brasil
-2	Inglaterra
-4	Fran‡a
-5	Dinamarca
-3	EUA
-6	Italia
-\.
+INSERT INTO public.pais VALUES (1, 'Brasil');
+INSERT INTO public.pais VALUES (2, 'Inglaterra');
+INSERT INTO public.pais VALUES (4, 'Fran‡a');
+INSERT INTO public.pais VALUES (5, 'Dinamarca');
+INSERT INTO public.pais VALUES (3, 'EUA');
+INSERT INTO public.pais VALUES (6, 'Italia');
 
 
 --
@@ -247,18 +235,16 @@ COPY public.pais (cod_pais, nome_pais) FROM stdin;
 -- Data for Name: roteirista; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.roteirista (cod_roteirista, nome_roteirista, cod_pais) FROM stdin;
-1	Cristopher Marks	3
-2	Jim Uhls	3
-3	Steven Conrad	3
-4	Chris McKenna	3
-5	Jon Spaihts	3
-6	Stephen King	3
-7	Simon Kinberg	2
-8	Mark Fergus	3
-9	William Davies	2
-10	Ryan Fleck	3
-\.
+INSERT INTO public.roteirista VALUES (1, 'Cristopher Marks', 3);
+INSERT INTO public.roteirista VALUES (2, 'Jim Uhls', 3);
+INSERT INTO public.roteirista VALUES (3, 'Steven Conrad', 3);
+INSERT INTO public.roteirista VALUES (4, 'Chris McKenna', 3);
+INSERT INTO public.roteirista VALUES (5, 'Jon Spaihts', 3);
+INSERT INTO public.roteirista VALUES (6, 'Stephen King', 3);
+INSERT INTO public.roteirista VALUES (7, 'Simon Kinberg', 2);
+INSERT INTO public.roteirista VALUES (8, 'Mark Fergus', 3);
+INSERT INTO public.roteirista VALUES (9, 'William Davies', 2);
+INSERT INTO public.roteirista VALUES (10, 'Ryan Fleck', 3);
 
 
 --
@@ -396,7 +382,7 @@ ALTER TABLE ONLY public.filme
     ADD CONSTRAINT cod_roteirista FOREIGN KEY (cod_roteirista) REFERENCES public.roteirista(cod_roteirista);
 
 
--- Completed on 2022-10-06 14:59:06
+-- Completed on 2022-10-06 15:16:15
 
 --
 -- PostgreSQL database dump complete
