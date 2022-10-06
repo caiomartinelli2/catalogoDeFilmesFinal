@@ -6,7 +6,7 @@ O projeto foi desenvolvido na línguagem de programação Java em toda a constru
 Passos para a execução:
 **1. Faça a recuperação do backup no arquivo "Backup catalogoDeFilmes.sql"**
 
-**2. Clone o projeto **
+**2. Clone o projeto**
 
 git clone https://github.com/caiomartinelli2/catalogoDeFilmesFinal.git
 
