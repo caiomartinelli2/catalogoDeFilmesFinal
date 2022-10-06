@@ -10,7 +10,7 @@ Passos para a execução:
 
 git clone https://github.com/caiomartinelli2/catalogoDeFilmesFinal.git
 
-**3. Abra o projeto em sua IDE **
+**3. Abra o projeto em sua IDE**
 
 **4. Faça a configuração da conexão na classe "Conexao.java"**
 
