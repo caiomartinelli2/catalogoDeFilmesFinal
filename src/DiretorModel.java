@@ -58,13 +58,42 @@ public class DiretorModel {
             }
         return list;
     }
+    
+    static void updateDiretor(DiretorBean db,int cod_diretor, 
+    String nome_diretor, int cod_pais, Connection con) throws SQLException{
+        PreparedStatement st;
+
+        StringBuffer columns = new StringBuffer( 255 );
+
+        if ( nome_diretor != null && !nome_diretor.equals( db.getNome_diretor()))
+        {
+            columns.append( "nome_diretor = '" + nome_diretor + "'" );
+        }
+        if ( cod_pais >= 0 && cod_pais != ( db.getCod_pais()))
+        {
+            if ( columns.length() > 0 ) {
+                columns.append( ", " );
+              }
+            columns.append( "cod_pais = '" + cod_pais + "'" );
+        }
+        
+
+        st = con.prepareStatement(
+        "UPDATE diretor SET " + columns.toString() + 
+        " WHERE cod_diretor = " + cod_diretor);
+        System.out.println("\nExecuting: " + st);
+       
+        st.execute();
+        st.close();
+
+    }
 
     static HashSet listDiretorAndPais(Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();
         st = con.createStatement();
             
-        String sql = "select d1.nome_diretor, p1.nome_pais from diretor d1 join pais p1 on d1.cod_pais=p1.cod_pais and p1.nome_pais = 'brasil';";
+        String sql = "select d1.nome_diretor, p1.nome_pais from diretor d1 join pais p1 on d1.cod_pais=p1.cod_pais and p1.nome_pais = 'EUA';";
         ResultSet result = st.executeQuery(sql);
         
         while(result.next()) {

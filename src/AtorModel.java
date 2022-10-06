@@ -29,6 +29,35 @@ public class AtorModel {
         
     }
 
+    static void updateFilme(AtorBean f,int cod_ator, String nome_ator, int cod_pais, Connection con) throws SQLException{
+        PreparedStatement st;
+
+        StringBuffer columns = new StringBuffer( 255 );
+
+        if ( nome_ator != null && !nome_ator.equals( f.getNome_ator()))
+        {
+            columns.append( "nome_ator = '" + nome_ator + "'" );
+        }
+        
+        if ( cod_pais >= 0 && cod_pais != ( f.getCod_pais()))
+        {
+            if ( columns.length() > 0 ) {
+                columns.append( ", " );
+              }
+            columns.append( "cod_pais = '" + cod_pais + "'" );
+        }
+        
+
+        st = con.prepareStatement(
+        "UPDATE ator SET " + columns.toString() + 
+        " WHERE cod_ator = " + cod_ator);
+        System.out.println("\nExecuting: " + st);
+        
+        st.execute();
+        st.close();
+
+    }
+
     static HashSet atorByCod(int cod_ator, Connection con) throws SQLException {
         Statement st;
         HashSet list = new HashSet();

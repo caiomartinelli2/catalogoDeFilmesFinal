@@ -129,7 +129,7 @@ public class FilmeModel {
         "UPDATE filme SET " + columns.toString() + 
         " WHERE cod_filme = " + cod_filme);
         System.out.println("\nExecuting: " + st);
-        System.out.println(columns.toString());
+       
         st.execute();
         st.close();
 

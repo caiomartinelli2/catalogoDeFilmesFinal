@@ -13,7 +13,7 @@ public class PaisController {
         System.out.println("cod_pais: ");
         int cod_pais = input.nextInt();
         
-        input.nextLine();
+       
         
         System.out.print("nome_pais: ");
         String nome_pais = input.next();
@@ -35,6 +35,36 @@ public class PaisController {
         System.out.println("País deletado!");
     }
 
+    public void atualizarPais(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_pais: ");
+        int cod_pais = input.nextInt();
+        input.nextLine();
+        
+        System.out.print("nome_pais: ");
+        String nome_pais = input.nextLine();
+
+        PaisBean db = new PaisBean(cod_pais);
+        
+        PaisModel.updatePais(db, cod_pais, nome_pais, con);
+        System.out.println("\nPais atualizado!");
+    }
+
+    public void paisPeloCod(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+            
+        System.out.println("cod_pais: ");
+        int cod_filme = input.nextInt();
+        input.nextLine();
+        
+        
+        HashSet all = PaisModel.paisByCod(cod_filme, con);
+        Iterator<PaisBean> it = all.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next().toString());
+        }
+    }
 
     void listarPais(Connection con) throws SQLException {
         HashSet all = PaisModel.listAll(con);

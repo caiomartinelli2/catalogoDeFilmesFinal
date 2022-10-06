@@ -35,6 +35,26 @@ public class AtorController {
         System.out.println("Ator deletado se ele existir!");
     }
 
+    public void atualizarAtor(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_ator: ");
+        int cod_ator = input.nextInt();
+        input.nextLine();
+        
+        System.out.print("nome_ator: ");
+        String nome_filme = input.nextLine();
+    
+        System.out.println("cod_pais: ");
+        int cod_pais = input.nextInt();
+        
+
+        AtorBean ab = new AtorBean(cod_ator);
+        
+        AtorModel.updateFilme(ab, cod_ator, nome_filme, cod_pais, con);
+        System.out.println("Ator atualizado!");
+    }
+
     public void atorPeloCod(Connection con) throws SQLException{
         Scanner input = new Scanner(System.in);
             

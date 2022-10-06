@@ -20,7 +20,7 @@ public class Filme {
                         case 3: new FilmeController().listarFilme(con);
                         System.in.read();
                         break;
-                        case 4: new FilmeController().updateFilme(con);
+                        case 4: new FilmeController().atualizarFilme(con);
                         System.in.read();
                         break;
                         case 5: new FilmeController().filmePeloCod(con);
@@ -38,6 +38,8 @@ public class Filme {
             System.out.println("1 - Inserir um novo filme: ");
             System.out.println("2 - Deletar um filme: ");
             System.out.println("3 - Listar todos os filmes: ");
+            System.out.println("4 - Atualizar o filme ");
+            System.out.println("5 - Listar o filme pelo cod ");
             System.out.println("**Informe o número diferente para voltar**");
             System.out.print("\nSua opção: ");
             

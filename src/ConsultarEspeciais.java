@@ -28,7 +28,7 @@ public class ConsultarEspeciais {
             System.out.println("Informe o número da opção que desejas executar: ");
             System.out.println("1 - Mostrar o nome dos filmes e o nome de seu genero ");
             System.out.println("2 - Mostrar o nome dos atores e do Filme que ele faz parte ");
-            System.out.println("3 - Mostrar diretores que são dos Brasil ");
+            System.out.println("3 - Mostrar diretores que são dos EUA ");
             System.out.println("**Informe o número diferente para voltar**");
             System.out.print("\nSua opção: \n");
             Scanner input = new Scanner(System.in);

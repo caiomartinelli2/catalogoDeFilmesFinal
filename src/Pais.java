@@ -19,10 +19,16 @@ public class Pais {
                         case 3: new PaisController().listarPais(con);
                         System.in.read();
                         break;
+                        case 4: new PaisController().paisPeloCod(con);
+                        System.in.read();
+                        break;
+                        case 5: new PaisController().atualizarPais(con);
+                        System.in.read();
+                        break;
                     }
                 
                 
-            } while(op>0 && op<3);  
+            } while(op>0 && op<4);  
         
     }
         private static int menu() { 
@@ -31,8 +37,10 @@ public class Pais {
             System.out.println("1 - Inserir um novo pais: ");
             System.out.println("2 - Deletar um pais: ");
             System.out.println("3 - Listar todos os pais: ");
+            System.out.println("4 - Listar o pais pelo cod: ");
+            System.out.println("5 - Atualizar o pais: ");
             System.out.println("**Informe o número diferente para voltar**");
-            System.out.print("\nSua opção: \n");
+            System.out.print("\nSua opção: ");
             Scanner input = new Scanner(System.in);
         
             return input.nextInt();

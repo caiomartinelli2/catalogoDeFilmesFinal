@@ -17,20 +17,28 @@ public class Roteirista {
                         case 3: new RoteiristaController().listarRoteirista(con);
                         System.in.read();
                         break;
+                        case 4: new RoteiristaController().roteiristaPeloCod(con);
+                        System.in.read();
+                        break;
+                        case 5: new RoteiristaController().atualizarRoteirista(con);
+                        System.in.read();
+                        break;
                     }
                 
                 
-            } while(op>0 && op<3);  
+            } while(op>0 && op<5);  
         
     }
         private static int menu() { 
             System.out.println("");
-            System.out.println("Informe o número da opção que desejas executar: ");
-            System.out.println("1 - Inserir um novo roteirista: ");
-            System.out.println("2 - Deletar um roteirista: ");
-            System.out.println("3 - Listar todos os roteirista: ");
+            System.out.println("Informe o número da opção que desejas executar");
+            System.out.println("1 - Inserir um novo roteirista");
+            System.out.println("2 - Deletar um roteirista");
+            System.out.println("3 - Listar todos os roteirista ");
+            System.out.println("4 - Listar roteiristapelo cod ");
+            System.out.println("5 - Atualizar o roteirista ");
             System.out.println("**Informe o número diferente para voltar**");
-            System.out.print("\nSua opção: \n");
+            System.out.print("\nSua opção: ");
             Scanner input = new Scanner(System.in);
         
             return input.nextInt();

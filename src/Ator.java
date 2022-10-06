@@ -22,7 +22,10 @@ public class Ator {
                     case 4: new AtorController().atorPeloCod(con);
                     System.in.read();
                     break;
-                    
+                    case 5: new AtorController().atualizarAtor(con);
+                    System.in.read();
+                    break;
+                
                 }
             
             
@@ -31,10 +34,12 @@ public class Ator {
 }
     private static int menu() { 
         System.out.println("");
-        System.out.println("Informe o número da opção que desejas executar: ");
-        System.out.println("1 - Inserir um novo ator: ");
-        System.out.println("2 - Deletar um ator: ");
-        System.out.println("3 - Listar todos os atores: ");
+        System.out.println("Informe o número da opção que desejas executar ");
+        System.out.println("1 - Inserir um novo ator ");
+        System.out.println("2 - Deletar um ator ");
+        System.out.println("3 - Listar todos os atores ");
+        System.out.println("4 - Listar o ator pelo cod ");
+        System.out.println("5 - Atualizar o ator ");
         System.out.println("**Informe o número diferente para voltar**");
         System.out.print("\nSua opção: ");
         Scanner input = new Scanner(System.in);

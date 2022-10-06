@@ -7,6 +7,10 @@ public class Filme_atorBean {
         this.cod_ator = cod_ator;
     }
 
+    public Filme_atorBean(int cod_filme) {
+        this.cod_ator=cod_filme;
+    }
+
     public int getCod_filme() {
         return cod_filme;
     }

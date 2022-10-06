@@ -41,7 +41,7 @@ public class FilmeController {
         int cod_diretor = input.nextInt();
         
 
-        System.out.println("cod_diretor: ");
+        System.out.println("cod_roteirista: ");
         int cod_roteirista = input.nextInt();
         
 
@@ -64,7 +64,7 @@ public class FilmeController {
         System.out.println("Filme deletado!");
     }
 
-    public void updateFilme(Connection con) throws SQLException{
+    public void atualizarFilme(Connection con) throws SQLException{
         Scanner input = new Scanner(System.in);
         
         System.out.println("cod_filme: ");
@@ -101,7 +101,7 @@ public class FilmeController {
         FilmeBean fb = new FilmeBean(cod_filme);
         
         FilmeModel.updateFilme(fb, cod_filme, nome_filme, duracao, sinopse, cod_pais, cod_genero, cod_diretor, cod_roteirista, con);
-        System.out.println("Filme atualizado!");
+        System.out.println("\nFilme atualizado!");
     }
 
     public void filmePeloCod(Connection con) throws SQLException{

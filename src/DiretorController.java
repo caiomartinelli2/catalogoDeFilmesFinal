@@ -11,8 +11,11 @@ public class DiretorController {
         System.out.println("Insita os dados para criar um novo Diretor:");
         System.out.println("cod_diretor: ");
         int cod_diretor = input.nextInt();
+        input.nextLine();
+        
         System.out.print("nome_diretor: ");
-        String nome_diretor = input.next();
+        String nome_diretor = input.nextLine();
+        
         System.out.println("cod_pais: ");
         int cod_pais = input.nextInt();
 
@@ -31,6 +34,25 @@ public class DiretorController {
         
         DiretorModel.delete(db, con);
         System.out.println("Diretor deletado se existir!");
+    }
+
+    public void atualizarDiretor(Connection con) throws SQLException{
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("cod_diretor: ");
+        int cod_diretor = input.nextInt();
+        input.nextLine();
+        
+        System.out.print("nome_diretor: ");
+        String nome_diretor = input.nextLine();
+    
+        System.out.println("cod_pais: ");
+        int cod_pais = input.nextInt();
+    
+        DiretorBean db = new DiretorBean(cod_diretor);
+        
+        DiretorModel.updateDiretor(db, cod_diretor, nome_diretor, cod_pais, con);
+        System.out.println("\nDiretor atualizado!");
     }
 
     public void diretorPeloCod(Connection con) throws SQLException{
