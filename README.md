@@ -3,7 +3,8 @@ Cátalogo De Filmes 🎥
 📦 Desenvolvimento
 O projeto foi desenvolvido na línguagem de programação Java em toda a construção, utilizando a bíblioteca Jdbc PostgreSQL
 
-Passos para a execução:
+⚙️ Passos para a execução:
+
 **1. Faça a recuperação do backup no arquivo "Backup catalogoDeFilmes.sql"**
 
 **2. Clone o projeto**
